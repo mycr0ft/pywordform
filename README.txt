@@ -1,17 +1,14 @@
 pywordform:
 a python module to parse a Microsoft Word form in docx format, and
 extract all field values with their tags into a dictionary.
+This version has been updated from the 2012 revision posted at 
+http://www.decalage.info/python/pywordform
 
-Project website: http://www.decalage.info/python/pywordform
-
-
+PROJECT WEBSITE: https://github.com/mycr0ft/pywordform
 
 INSTALLATION:
 
-- on Windows, launch install.bat
-- on other systems, launch: setup.py install
-
-
+-setup.py install
 
 HOW TO USE THIS MODULE:
 
@@ -21,7 +18,8 @@ From the shell, extract all fields with tags:
 
 > python pywordform.py sample_form.docx
 field1 = "hello, world."
-field2 = "hello,"
+field2 = "hello,
+world."
 field3 = "value B"
 field4 = "04-03-2012"
 
@@ -33,10 +31,7 @@ print fields
 
 => this returns a dictionary of field values indexed by tags.
 
-See http://www.decalage.info/python/pywordform
 See main program at the end of the module, and also docstrings.
-
-
 
 LICENSE:
 

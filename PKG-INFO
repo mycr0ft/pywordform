@@ -1,12 +1,12 @@
 Metadata-Version: 1.0
 Name: pywordform
-Version: 0.02
+Version: 0.03
 Summary: a python module to parse a Microsoft Word form in docx format, and extract all field values with their tags into a dictionary.
-Home-page: http://www.decalage.info/python/pywordform
-Author: Philippe Lagadec
-Author-email: UNKNOWN
+Home-page: 
+Author: Philippe Lagadec, Jon Fox
+Author-email: drjonfox@gmail.com
 License: BSD (see source code or LICENCE.txt)
-Download-URL: https://bitbucket.org/decalage/pywordform/downloads
+Download-URL: 
 Description: UNKNOWN
 Platform: UNKNOWN
 Classifier: Development Status :: 4 - Beta
