@@ -30,13 +30,13 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 """
 
-__version__ = '0.02'
+__version__ = '0.03'
 
 #------------------------------------------------------------------------------
 # CHANGELOG:
 # 2012-02-17 v0.01 PL: - first version
 # 2012-04-19 v0.02 PL: - added support for multiline text fields
-
+# 2021-11-17 v0.03 FB: - made it work with Python 3.9
 #------------------------------------------------------------------------------
 #TODO:
 # - recognize date fields and extract fulldate
@@ -72,7 +72,7 @@ def parse_multiline (field_content_elem):
     """
     value = ''
     # iterate over all children elements
-    for elem in field_content_elem.getiterator():
+    for elem in field_content_elem.iter():
         # extract text:
         if elem.tag == TAG_TEXT:
             value += elem.text
@@ -87,7 +87,7 @@ def parse_form(filename):
     zfile = zipfile.ZipFile(filename)
     form = zfile.read('word/document.xml')
     xmlroot = ET.fromstring(form)
-    for field in xmlroot.getiterator(TAG_FIELD):
+    for field in xmlroot.iter(TAG_FIELD):
         field_tag = field.find(TAG_FIELDPROP+'/'+TAG_FIELDTAG)
         if field_tag is not None:
             tag = field_tag.get(ATTR_FIELDTAGVAL, None)
